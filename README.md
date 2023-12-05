@@ -22,5 +22,5 @@ The function getLearnersData will extract the data from the Course Information, 
 
 newScore will calculate the students final and accumulate the score in respect to the weighted percentage of 25% for "Introduction to JavaScript.
 
-It will print and return the learners average score. 
+It will print and return the learners average score, as well as letter grade. 
 
