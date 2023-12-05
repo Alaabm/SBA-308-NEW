@@ -182,6 +182,15 @@ const CourseInfo = {
                 // Additional error handling code if needed
             }
 
+            switch (true) {
+                case AssignmentGroup.assignments.id === learnerSubmissions.assignment_id:
+                //console.log("Correct Assignment");
+                break;
+
+                default:
+                //console.log("Wrong Assignment, re-submit in the correct assignment group!");
+                    
+            }
             
 
 
