@@ -144,12 +144,18 @@ const CourseInfo = {
           const averageScore = 0 < learner.totalWeight ? 
           (learner.finalScore / learner.totalWeight) * 100 : 0;
           console.log("Student ID: ", learner.id, 
-  
-          // if (averageScore > 100) {
+
           
         // toFixed() is a Number method that is used to format a number using fixed-point notation. toFixed() formats a number to a given length after the decimal point by rounding off to reduce the length or by adding zeros to increase the length.
           
           "Average Score: ",averageScore.toFixed(2) + "%");
+
+          if (averageScore > 100) {
+            console.log("Error: Average score cannot be greater than 100 ");
+          } else{
+            console.log("Assignment score is within allowed range");
+          }
+          
           
           return {
               id: learner.id,
