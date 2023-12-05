@@ -94,10 +94,10 @@ const CourseInfo = {
         }
 
     //10 percent dedcuction per day late. 0 lowest score. 
-    const calculateTheScore=(learnerSubmission,assignment, lateDeduction)=>{
+    const calculateTheScore=(learnerSubmission,assignment, lateDeduct)=>{
     const maximumScore = assignment.points_possible;
     let score = learnerSubmission.score;
-    if(lateDeduction){
+    if(lateDeduct){
           score = Math.max(score - (0.1 * maximumScore),0) 
     }
 
@@ -175,8 +175,8 @@ const CourseInfo = {
                     throw new Error("Negative!");
                 } else {
                     //console.log("Score is non-negative.");
-                    // Additional code if averageScore is non-negative
                 }
+
             } catch (error) {
                 console.error(error.message);
                 // Additional error handling code if needed
@@ -189,9 +189,7 @@ const CourseInfo = {
 
                 default:
                 //console.log("Wrong Assignment, re-submit in the correct assignment group!");
-                    
-            }
-            
+            }              
 
 
 
